@@ -7,15 +7,7 @@ server:
 
 spring:
   profiles: dev
-  data:
-    mongodb:
-      uri: mongodb.testando.kinghost.com.br
-      
- 		
-
-    
-
-
+ 
 server.tomcat.max-threads: 600
 server.tomcat.connectionTimeout: 120000
 server.connection-timeout: 120000
