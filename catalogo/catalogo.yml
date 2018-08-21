@@ -1,0 +1,15 @@
+
+spring:
+  profiles: dev
+  data:
+   mongodb:
+    host: mongodb.testando.kinghost.com.br
+    port:27017
+    databaseName: testando01
+    password: testando01
+    username: testando01
+    repositories:
+      enabled: true
+server:
+  port: 8107
+		
