@@ -2,9 +2,6 @@ spring:
   profiles:
     active: local
 
-server:
-  port: 1028
-
 management:
   security:
     enabled: false
@@ -20,3 +17,22 @@ spring:
       port: 27017	  
       repositories:
         enabled: true
+
+server:
+  port: 1000
+  
+---
+spring:
+  profiles: local
+  data:
+    mongodb:
+      host: mongodb.testando.kinghost.com.br
+      username: testando01
+      password: testando01
+      database: testando01	 
+      port: 27017	  
+      repositories:
+        enabled: true
+
+server:
+  port: 2000
