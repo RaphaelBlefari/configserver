@@ -1,15 +1,21 @@
+spring:
+  profiles: 
+    active: local
+
+server:
+  port: 8088
 
 spring:
   profiles: dev
   data:
-   mongodb:
-    host: mongodb.testando.kinghost.com.br
-    port:27017
-    databaseName: testando01
-    password: testando01
-    username: testando01
-    repositories:
-      enabled: true
-server:
-  port: 8107
-		
+    mongodb:
+      host: mongodb.testando.kinghost.com.br
+      
+ 		
+
+    
+
+
+server.tomcat.max-threads: 600
+server.tomcat.connectionTimeout: 120000
+server.connection-timeout: 120000
