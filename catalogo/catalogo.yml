@@ -1,107 +1,15 @@
-spring:
-  profiles: 
-    active: local
 
-server:
-  port: 8088
-
-management:
-  security:
-    enabled: false
-
----
-spring:
-  profiles: local
-  data:
-    mongodb:         
-      uri: mongodb://mongo.server:27017/catalogo       
-      repositories:
-        enabled: true
-solr:
-  host: http://solr.server:8983/solr  
-signing:
-  key: vi@v@r3joDev2018
-cics:
-  serverName: CICSHM2
-  protocolo: tcp
-  porta: 2006
-  host: cics.server
-security:
-  enabled: false
-logging:
-  level:
-    br.com.viavarejo: DEBUG   
-urlImagem:
-  casasBahia: https://img.casasbahia.com.br/Control/ArquivoExibir.aspx?IdArquivo=
-  pontoFrio: https://img.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=
-  cor: http://intranetsistemas.viavarejo.com.br/config/img/produtos/cores/
----
 spring:
   profiles: dev
   data:
-    mongodb:         
-      uri: mongodb://mongo.server:27017/catalogo       
-      repositories:
-        enabled: true
-solr:
-  host: http://solr.server:8983/solr
-signing:
-  key: vi@v@r3joDev2018
-cics:
-  serverName: CICSHM2
-  protocolo: tcp
-  porta: 2006
-  host: cics.server
-security:
- oauth2:
-  resource:
-    userInfoUri: http://application.server:8901/user
-  client:
-    grant-type: client_credentials
-logging:
-  level:
-    br.com.viavarejo: DEBUG   
-urlImagem:
-  casasBahia: https://img.casasbahia.com.br/Control/ArquivoExibir.aspx?IdArquivo=
-  pontoFrio: https://img.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=
-  cor: http://intranetsistemas.viavarejo.com.br/config/img/produtos/cores/
-
----
-spring:
-  profiles: docker
-  data:
-    mongodb:
-      uri: ${MONGO_URI}
-      
-solr:
-  host: ${SOLR_HOST}
-  zk-host: ${ZK_SOLR_HOST}
-  
-signing:
-  key: ${SIGNING_KEY}
-  
-cics:
-  serverName: ${CICS_SERVER_NAME}
-  protocolo: tcp
-  porta: ${CICS_PORTA}
-  host: ${CICS_HOST}
-  
-security:
- oauth2:
-  resource:
-    userInfoUri: http://vv-autorizacao:8901/user
-  client:
-    grant-type: client_credentials
-    
-logging:
-  level:
-    br.com.viavarejo: ERROR
-      
-urlImagem:
-  casasBahia: https://img.casasbahia.com.br/Control/ArquivoExibir.aspx?IdArquivo=
-  pontoFrio: https://img.pontofrio.com.br/Control/ArquivoExibir.aspx?IdArquivo=
-  cor: http://intranetsistemas.viavarejo.com.br/config/img/produtos/cores/
-
-server.tomcat.max-threads: 600
-server.tomcat.connectionTimeout: 120000
-server.connection-timeout: 120000
+   mongodb:
+    host: mongodb.testando.kinghost.com.br
+    port:27017
+    databaseName: testando01
+    password: testando01
+    username: testando01
+    repositories:
+      enabled: true
+server:
+  port: 8107
+		
