@@ -13,7 +13,7 @@ spring:
   profiles: dev
   data:
     mongodb:
-      host: mongodb://mongo.server:27017/catalogo
+      host: mongodb.testando.kinghost.com.br
       username: testando01
       password: testando01
       database: testando01	 
