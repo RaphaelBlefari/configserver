@@ -1,13 +1,18 @@
 spring:
-  profiles: 
+  profiles:
     active: local
 
 server:
-  port: 8088
+  port: 1028
 
+management:
+  security:
+    enabled: false
+---
 spring:
   profiles: dev
- 
-server.tomcat.max-threads: 600
-server.tomcat.connectionTimeout: 120000
-server.connection-timeout: 120000
+  data:
+    mongodb:
+      host: mongodb://mongo.server:27017/catalogo
+      repositories:
+        enabled: true
