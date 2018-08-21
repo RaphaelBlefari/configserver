@@ -9,7 +9,7 @@ spring:
   profiles: dev
   data:
     mongodb:
-      host: mongodb.testando.kinghost.com.br
+      uri: mongodb.testando.kinghost.com.br
       
  		
 
